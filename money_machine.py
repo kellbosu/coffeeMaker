@@ -2,7 +2,7 @@ class MoneyMachine:
 
     CURRENCY = "$"
 
-    COING_VALUES = {
+    COIN_VALUES = {
         "quarters": 0.25,
         "dimes": 0.10,
         "nickels": 0.05,
@@ -21,8 +21,8 @@ class MoneyMachine:
         """Returns the total calculated from coins inserted."""
         print("Please insert coins.")
         for coin in self.COIN_VALUES:
-            self.money_reveiced += int(input(f"How many {coin}?: ")) * self.COING_VALUES[coin]
-            return self.money_received
+            self.money_received += int(input(f"How many {coin}?: ")) * self.COIN_VALUES[coin]
+        return self.money_received
         
     def make_payment(self, cost):
         """Returns True when payment is accepted, or Flase if insufficient"""
